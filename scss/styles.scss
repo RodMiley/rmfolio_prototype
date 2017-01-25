@@ -90,60 +90,55 @@ section {
     background-size:cover !important;
 }
 
-.firstSection{
 
-    @media only screen and (max-width:768px){
+
+    @media only screen and (max-width:767px){
      
-        .fullheight.left {
-            height: 0vh;
+        .fullheight{
+            height: 50vh;
         }
 
     }
 
-}
 
 .halfheight {
     height:50vh;
 }
 
-.red .hovereffect .overlay {
-    background: #65c2cf;
-    background: hsl(184, 65%, 49%);
+.red .hovereffect .overlay, .red .hovereffect h2:after  {
+    background: hsl(350, 85%, 41%);
 }
 
-.orange .hovereffect .overlay {
+.orange .hovereffect .overlay, .orange .hovereffect h2:after {
     background: hsl(28, 100%, 52%);
 }
 
 .green .hovereffect .overlay {
-    background: hsl(200, 60%, 55%)n;
+    background: hsl(200, 60%, 55%);
 }
 
-.promo {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0 7%;
-    width: 100%;
-    background: url('../img/liverbuilding.jpg') no-repeat 0 0;
-    background-position: center;
-    transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
+
+.lime .hovereffect .overlay, .lime .hovereffect h2:after {
+    background: hsl(73, 63%, 53%);
 }
+
+
 
 .hovereffect {
     width: 100%;
     height: 100%;
-    float: left;
-    overflow: hidden;
     position: relative;
     text-align: center;
     cursor: default;
-}
+    position:relative;
+    overflow:hidden;
 
-.hovereffect .overlay {
+    a{
+        display:block;
+        cursor:pointer;
+    }
+
+    .overlay {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -152,33 +147,100 @@ section {
     left: 0;
     opacity: 1;
     -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out
+    transition: all .2s ease-in-out;
 }
 
-.hovereffect img {
-    display: block;
-    position: relative;
+
+}
+
+.hovereffect img.background {
     -webkit-transition: all 1.7s linear;
     transition: all 1.7s linear;
     height:100%;
 }
 
+.hovereffect img.logo {
+    display: block;
+    position: absolute;
+    -webkit-transition:0;
+    transition:0;
+    height:auto;
+    top:20%;
+    left:25%;
+    width:50%;
+}
+
 .hovereffect h2 {
     text-transform: uppercase;
-    color: #fff;
+    color: #333;
     text-align: right;
-    position: relative;
+    position: absolute;
+    width:100%;
+    right:-1px;
+    left:0px;
     bottom: 0px;
     font-size: 17px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255,1);
     -webkit-transform: translatex(100%);
     -ms-transform: translatex(100%);
     transform: translatex(100%);
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    padding: 50px;
-    margin: 0px;
+    margin:0px;
+    padding:0px 120px 0px 42px;
+    min-height:100px;
+    span{
+        display:inline-block;
+        vertical-align: middle;
+        height:100px;
+
+    }
+
+   &:after {
+    content: "\f101";
+    font-family: FontAwesome;
+    font-size: 34px;
+    line-height: 3.5em;
+    width:100px;
+    height:100px;
+    color:#fff;
+    position:absolute;
+    text-align: center;
+    line-height: 2.8em;
+    right:0px;
+    top:0px; animation: bounce 2s infinite;
+ -webkit-animation: bounce 2s infinite;
+ -moz-animation: bounce 2s infinite;
+ -o-animation: bounce 2s infinite;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
+ 
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+ 40% {-webkit-transform: translateX(15px);}
+ 60% {-webkit-transform: translateX(0px);}
+}
+ 
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 40% {-moz-transform: translateX(15px);}
+ 60% {-moz-transform: translateX(0px);}
+}
+ 
+@-o-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+ 40% {-o-transform: translateX(15px);}
+ 60% {-o-transform: translateX(0px);}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+ 40% {transform: translateX(15px);}
+ 60% {transform: translateX(0px);}
+}
+}
+
+
 
 .hovereffect a.info {
     text-decoration: none;
@@ -199,7 +261,7 @@ section {
     box-shadow: 0 0 5px #fff;
 }
 
-.hovereffect:hover img {
+.hovereffect:hover img.background {
     -ms-transform: scale(1.07);
     -webkit-transform: scale(1.07);
     transform: scale(1.07);
@@ -225,12 +287,7 @@ section {
 }
 
 
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
 
-
-
-/* ICON STYLES - ICON FROM: http://fontastic.me/
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .sr{
     display:none;
@@ -351,7 +408,7 @@ ul, li {
 	position: absolute;
 	display: block;
 	height: 4px;
-	background: #c0392b;
+	background: #fff;
 	width: 40px;
 	left: 60px;
 	top:25px;
@@ -526,9 +583,7 @@ nav li a {
     font-size: 1.5em;
   }
   
-  .scroll-icon {
-    display: none;
-  }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -565,136 +620,158 @@ h1{
       color:#e67e22;
   }
 
-   @media only screen and (max-width:768px){
+   @media only screen and (max-width:900px){
+  
+      right:0px;
+      left:40px;
+      top:150px;
+
+  }
+
+
+   @media only screen and (max-width:767px){
       position:relative;
       text-align:center;
-      font-size:40px;
+      font-size:70px;
       right:0px;
       left:0px;
-      top:70px;
+
 
       span{
           font-size:18px;
       }
 
   }
+
+     @media only screen and (max-width:736px) and (orientation:landscape){
+      font-size:50px;
+      top:0px;
+  }
+
+       @media only screen and (max-width:500px){
+      font-size:50px;
+      top:100px;
+  }
 }
 
-.intro{
-  width:90%;
-  background:rgba(255,255,255,1);
-  position:absolute;
-  bottom:0px;
-  right:0px;
-  color:#7f8c8d;
-  padding-bottom:100px;
-  min-height:40vh;
-
-  h2 {
-    font-size: 300px;
-    font-weight: 900;
-    color:#e67e22;
-    margin-top:-200px;
-    position:relative;
-    letter-spacing:0px;
-
-     span{
-      font-size:18px;
-      font-weight:500;
-      display:block;
-      position:absolute;
-      top:141px;
-      display:block;
-      background:rgba(0,0,0,0.6);
-      padding:20px 55px ;
-      color:#fff;
-      width:100%;
-  }
-
-  }
-
- 
-
-  p{
-      margin:-50px 0px 0 70px;
-      font-weight:600;
-  }
-
-  blockquote{
-      font-size:30px;
-      font-weight: 300;
-      margin:0px 0px 0 70px;
-      border:none;
-      padding:30px 0 0 90px;
-      position:relative;
-
-
-
-      &:after{
-          content: "\f10d"; 
-          font-family: FontAwesome;
-          font-size:65px;
-          top:0px;
-          position:absolute;
-          left:0px;
-          
-      }
-  }
-
-
-     @media only screen and (max-width:768px){
-
-      padding-bottom:50px;    
-        
+.intro {
+    width: 90%;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: #7f8c8d;
+    padding-bottom: 100px;
+    min-height: 40vh;
+    h2 {
+        font-size: 300px;
+        font-weight: 900;
+        color: #e67e22;
+        margin-top: -200px;
+        position: relative;
+        letter-spacing: 0px;
+        span {
+            font-size: 18px;
+            font-weight: 500;
+            display: block;
+            position: absolute;
+            top: 141px;
+            display: block;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 55px;
+            color: #fff;
+            width: 100%;
+        }
+    }
+    p {
+        margin: -50px 0px 0 70px;
+        font-weight: 600;
+    }
+    blockquote {
+        font-size: 30px;
+        font-weight: 300;
+        margin: 0px 0px 0 70px;
+        border: none;
+        padding: 30px 50px 0 90px;
+        position: relative;
+        &:after {
+            content: "\f10d";
+            font-family: FontAwesome;
+            font-size: 65px;
+            top: 0px;
+            position: absolute;
+            left: 0px;
+        }
+    }
+    @media only screen and (max-width:768px) {
+        width: 100%;
+        padding-bottom: 50px;
         h2 {
-    font-size: 200px;
-    font-weight: 900;
-    color:#e67e22;
-    margin-top:-150px;
-    position:relative;
-    text-align: center;
-
-     span{
-      font-size:15px;
-      font-weight:500;
-      display:block;
-      position:absolute;
-      top:95px;
-      display:block;
-      background:rgba(0,0,0,0.6);
-      padding:20px 15px ;
-      color:#fff;
-      width:100%;
-  }
-
-  }
-
-      p{
-      margin:-20px 0px 0 50px;
-      font-weight:600;
-  }
-
-  blockquote{
-      font-size:20px;
-      font-weight: 300;
-      margin:0px 0px 0 50px;
-      border:none;
-      padding:10px 0 0 40px;
-      position:relative;
-
-
-
-      &:after{
-          content: "\f10d"; 
-          font-family: FontAwesome;
-          font-size:35px;
-          top:0px;
-          position:absolute;
-          left:0px;
-          
-      }
-  }
-        
+            font-size: 200px;
+            font-weight: 900;
+            color: #e67e22;
+            margin-top: -150px;
+            position: relative;
+            text-align: center;
+            span {
+                font-size: 15px;
+                font-weight: 500;
+                display: block;
+                position: absolute;
+                top: 95px;
+                display: block;
+                background: rgba(0, 0, 0, 0.6);
+                padding: 20px 15px;
+                color: #fff;
+                width: 100%;
+            }
+        }
+        p {
+            margin: -20px 0px 0 50px;
+            font-weight: 600;
+        }
+        blockquote {
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0px 0px 0 50px;
+            border: none;
+            padding: 10px 0 0 40px;
+            position: relative;
+            &:after {
+                content: "\f10d";
+                font-family: FontAwesome;
+                font-size: 35px;
+                top: 0px;
+                position: absolute;
+                left: 0px;
+            }
+        }
+    }
+    @media only screen and (max-width:736px) and (orientation:landscape) {
+        top: 30px;
+        h2 {
+            font-size: 180px;
+            margin-top: -125px;
+            span {
+                font-size: 15px;
+                font-weight: 500;
+                display: block;
+                position: absolute;
+                top: 69px;
+                display: block;
+                background: rgba(0, 0, 0, 0.3);
+                padding: 20px 15px;
+                color: #fff;
+                width: 100%;
+            }
+        }
+        p {
+            margin: -68px 0px 0 50px;
+            font-weight: 600;
+        }
     }
 }
 
+.floatRight{
+    float:right;
+}
