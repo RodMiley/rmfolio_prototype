@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="1px" viewBox="0 0 47 1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="986" y="618" width="47" height="1"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="47" height="1" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-986.000000, -618.000000)" stroke="#0D1217" stroke-width="2">
+            <use id="Rectangle-3" mask="url(#mask-2)" transform="translate(1009.500000, 618.500000) scale(1, -1) translate(-1009.500000, -618.500000) " xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
