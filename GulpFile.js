@@ -13,6 +13,17 @@ gulp.task('sass', function(){
     }))
 });
 
+gulp.task('sass', function(){
+     return gulp.src('scss/base2.scss')
+    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
+
+
 
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="114px" viewBox="0 0 40 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="37" width="40" height="40"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-780.000000, -2842.000000)">
+            <g id="Group-3" transform="translate(780.000000, 2842.000000)">
+                <rect id="Rectangle-12" fill="#090F16" x="20" y="0" width="1" height="37"></rect>
+                <rect id="Rectangle-12" fill="#090F16" transform="translate(20.500000, 95.500000) scale(-1, 1) translate(-20.500000, -95.500000) " x="20" y="77" width="1" height="37"></rect>
+                <use id="Rectangle-12" stroke="#0B1117" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <text id="angle-down---FontAwesome" font-family="FontAwesome" font-size="25" font-weight="normal" fill="#E35D00">
+                    <tspan x="12" y="66"></tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
