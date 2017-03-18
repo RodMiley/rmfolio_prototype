@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,700,800,400,600");
+.content-container {
+  height: 100%;
+  background-size: cover !important; }
+
 .content-block {
   padding: 0 80px 0 186px;
   display: table-cell;
@@ -9,26 +13,76 @@
     .content-block {
       padding: 80px 30px 30px 30px; } }
 
+.content-block-ab {
+  padding: 30px 80px 100px 80px;
+  position: absolute;
+  bottom: 0px;
+  height: 100%;
+  width: 50%; }
+  .content-block-ab div {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative; }
+  @media only screen and (max-width: 414px) {
+    .content-block-ab {
+      padding: 30px; } }
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    .content-block-ab {
+      min-height: 50%;
+      height: 50%;
+      width: 100%; } }
+  @media only screen and (min-width: 1025px) {
+    .content-block-ab {
+      width: 50%;
+      height: 100%;
+      padding: 60px 80px 100px 180px;
+      display: block; } }
+  @media only screen and (min-width: 1200px) {
+    .content-block-ab {
+      width: 40%; } }
+  @media only screen and (max-width: 1024px) {
+    .content-block-ab.fullwidth {
+      width: 100%;
+      height: auto; }
+      .content-block-ab.fullwidth div {
+        top: 0;
+        transform: translateY(0);
+        position: relative; } }
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  .content-block-ab {
+    padding: 0px 80px 70px 100px; } }
+
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  .content-block-ab {
+    padding: 30px 50px 30px 80px; } }
+
 .content-block-img {
-  padding: 0;
-  display: table-cell;
-  vertical-align: middle; }
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative; }
   .content-block-img img {
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
     display: block; }
 
 .overlay {
-  width: 100%;
+  width: 60%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   opacity: 0.75;
-  z-index: 0;
-  display: table; }
+  z-index: 0; }
+  @media only screen and (max-width: 1024px) {
+    .overlay {
+      width: 50%; } }
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    .overlay {
+      width: 100%;
+      height: 50%; } }
 
-.lime .overlay {
+.overlay.lime {
   background: #BBDB47; }
 
 .gray {
@@ -64,12 +118,6 @@ a.brand.active {
   -webkit-box-shadow: 2px 2px 2px -1px rgba(189, 187, 189, 0.25);
   -moz-box-shadow: 2px 2px 2px -1px rgba(189, 187, 189, 0.25);
   box-shadow: 2px 2px 2px -1px rgba(189, 187, 189, 0.25); }
-  @media only screen and (max-width: 768px) {
-    a.brand.active {
-      width: 100%;
-      height: 80px;
-      background-size: 60px;
-      background-position: left 10px top 10px; } }
   a.brand.active:after {
     content: "\f060";
     font-family: FontAwesome;
@@ -83,6 +131,54 @@ a.brand.active {
     background-color: #333; }
     a.brand.active:hover:after {
       margin: -30px 0 0 -20px; }
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    a.brand.active {
+      width: 100%;
+      height: 80px;
+      background-size: 60px;
+      background-position: left 10px top 10px; }
+      a.brand.active:after, a.brand.active:hover:after, a.brand.activefocus:after {
+        content: "\f060";
+        font-size: 25px;
+        top: 50%;
+        left: 100px;
+        margin: -15px 0 0 0; } }
+  @media only screen and (max-width: 414px) and (orientation: portrait) {
+    a.brand.active {
+      width: 100%;
+      height: 60px;
+      background-size: 50px;
+      background-position: left 5px top 5px; }
+      a.brand.active:after, a.brand.active:hover:after, a.brand.activefocus:after {
+        content: "\f060";
+        font-size: 20px;
+        top: 50%;
+        left: 70px;
+        margin: -15px 0 0 0; } }
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
+    a.brand.active {
+      width: 80px;
+      background-size: 70px;
+      background-position: left 5px top 5px; }
+      a.brand.active:after {
+        content: "\f060";
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        margin: -15px 0 0 -8px; } }
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    a.brand.active {
+      width: 60px;
+      background-size: 50px;
+      background-position: left 5px top 5px; }
+      a.brand.active:after {
+        content: "\f060";
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        margin: -15px 0 0 -8px; }
+      a.brand.active:hover:after {
+        margin: -15px 0 0 -12px; } }
 
 .scrollTo {
   position: absolute;
@@ -113,10 +209,10 @@ a.brand.active {
     background: #333; }
     .scrollTo:hover span.arrow {
       background: url("../img/sectionArrowHover.svg") no-repeat bottom center; }
-  @media only screen and (max-width: 736px) and (orientation: landscape) {
+  @media only screen and (max-width: 414px) {
     .scrollTo {
       display: none; } }
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 736px) and (orientation: landscape) {
     .scrollTo {
       display: none; } }
 
@@ -185,7 +281,6 @@ html.fp-enabled,
 .fp-slides {
   z-index: 1;
   height: 100%;
-  overflow: hidden;
   position: relative;
   -webkit-transition: all 0.3s ease-out;
   /* Safari<=6 Android<=4.3 */
@@ -200,7 +295,8 @@ html.fp-enabled,
   display: table-cell;
   vertical-align: middle;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
 
 .fp-slidesContainer {
   float: left;
@@ -208,24 +304,57 @@ html.fp-enabled,
 
 .fp-controlArrow {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   top: 0;
   cursor: pointer;
-  border: 1px solid #A33A6A;
+  background: rgba(0, 0, 0, 0.4);
   width: 60px;
   height: 60px;
   font-family: FontAwesome;
   font-size: 30px;
-  color: #fff;
+  color: orange;
   text-align: center;
-  line-height: 1.8em; }
+  line-height: 1.8em;
+  -webkit-transform: translate3d(0, 0, 0); }
   .fp-controlArrow:hover {
-    background: #A33A6A; }
+    background: rgba(0, 0, 0, 0.7); }
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    .fp-controlArrow {
+      top: 80px; } }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    .fp-controlArrow {
+      border: none;
+      top: 80px; } }
+  @media only screen and (max-width: 414px) and (orientation: portrait) {
+    .fp-controlArrow {
+      width: 50px;
+      height: 50px;
+      border: none;
+      font-size: 25px;
+      line-height: 2em;
+      top: 60px; } }
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    .fp-controlArrow {
+      top: 0px;
+      width: 50px;
+      height: 50px;
+      border: none;
+      font-size: 25px;
+      line-height: 2em; } }
 
 .fp-controlArrow.fp-prev {
   left: 0px; }
   .fp-controlArrow.fp-prev:after {
     content: "\f104"; }
+  @media only screen and (max-width: 1024px) and (orientation: landscape) {
+    .fp-controlArrow.fp-prev {
+      left: 80px; } }
+  @media only screen and (min-width: 1025px) and (orientation: landscape) {
+    .fp-controlArrow.fp-prev {
+      left: 106px; } }
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    .fp-controlArrow.fp-prev {
+      left: 60px; } }
 
 .fp-controlArrow.fp-next {
   right: 0px; }
@@ -256,19 +385,51 @@ html.fp-enabled,
 .fp-slidesNav {
   position: absolute;
   z-index: 4;
-  left: 50%;
-  opacity: 1; }
+  left: 0px;
+  opacity: 1;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: 0px !important; }
+  @media only screen and (max-width: 736px) and (orientation: landscape) {
+    .fp-slidesNav {
+      height: 50px; } }
+  @media only screen and (max-width: 414px) {
+    .fp-slidesNav {
+      height: 50px; } }
 
 .fp-slidesNav.bottom {
-  bottom: 17px; }
+  top: 60px;
+  -webkit-transform: translate3d(0, 0, 0); }
+  @media only screen and (max-width: 1024px) and (orientation: portrait) {
+    .fp-slidesNav.bottom {
+      top: 80px; } }
+  @media only screen and (max-width: 414px) and (orientation: portrait) {
+    .fp-slidesNav.bottom {
+      top: 60px; } }
+  @media only screen and (orientation: landscape) {
+    .fp-slidesNav.bottom {
+      top: 0px; } }
 
 .fp-slidesNav.top {
   top: 17px; }
 
 #fp-nav ul,
 .fp-slidesNav ul {
-  margin: 0;
-  padding: 0; }
+  margin: 10px  auto;
+  padding: 0;
+  width: 80%;
+  display: block;
+  text-align: center; }
+  @media only screen and (min-width: 414px) {
+    #fp-nav ul,
+    .fp-slidesNav ul {
+      margin: 15px  auto; } }
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    #fp-nav ul,
+    .fp-slidesNav ul {
+      padding-left: 50px;
+      margin: 10px  auto; } }
 
 #fp-nav ul li,
 .fp-slidesNav ul li {
@@ -308,7 +469,7 @@ html.fp-enabled,
   height: 4px;
   width: 4px;
   border: 0;
-  background: #333;
+  background: orange;
   left: 50%;
   top: 50%;
   margin: -2px 0 0 -2px;
@@ -349,12 +510,32 @@ html.fp-enabled,
 #fp-nav ul li .fp-tooltip.left {
   left: 20px; }
 
-.horizontal-scrolling {
-  padding-top: 60px; }
+/* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: orange;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px; }
 
-.fullheight2 {
-  height: 100%;
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid #fff; }
+
+.horizontal-scrolling {
   background-size: cover !important; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
   background: #333;
@@ -795,26 +976,6 @@ nav li a {
   padding: 30px;
   -webkit-transition: background .3s;
   transition: background .3s; }
-
-/* SLIDENAV STYLES - fullPage.js 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-  background: white;
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px; }
-
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span {
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  background: transparent;
-  box-sizing: border-box;
-  border: 1px solid #24221F; }
 
 /* MQ STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
