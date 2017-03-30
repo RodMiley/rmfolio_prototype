@@ -13,20 +13,15 @@ html {
 
 section{
   position:relative;
-  height:84vh;
-  margin:8vh;
-}
-
-.section{
-    padding-top:10vh;
 }
 
 .remove-side-padding{
   padding:0px;
 }
 
-
-
+.white{
+  background:#ffffff;
+}
 
 .row{
   margin:0px;
@@ -41,14 +36,14 @@ html, body {
 .scrollContainer{
 
   width:100%;
-  height:100vh;
+  height:70vh;
   position:relative;
   overflow: hidden;
 
   .scroll{
     
 
-    max-height:100vh;
+    max-height:70vh;
     overflow-y:scroll;
     overflow-x: hidden;
     width:102%;
@@ -62,10 +57,13 @@ html, body {
     margin:0 1%
   }
 
+.section{
+  margin:0 100px;
+}
+
 .content{
-  background:#f6f6f6;
-  padding:100px;
-  height:74vh;
+
+  padding:100px 100px 200px 100px;
   
   p{
     color:#414141;
@@ -228,8 +226,8 @@ nav{
   position:fixed;
   width:100%;
   top:0px;
-  background:#fff;
-  //border-bottom:1px solid #f2f2f2;
+  background:#263647;
+  border-bottom:1px solid #161D22;
   padding-left:100px;
 
   z-index: 5;
@@ -246,7 +244,7 @@ nav{
         a{
   
           border-bottom:0px;
-        //  border-left:1px solid #f2f2f2;
+          border-left:1px solid #161D22;
           padding:30px 20px;
           color:#E25200;
           display:block;
@@ -282,9 +280,12 @@ nav{
 
 .sectionTwo
 {
+  margin-top:100px;
+  z-index: 2;
+  .section{
     background:#FECD00;
-
-
+      padding:100px 0px 0px 0px;
+  }
 
   p{
     color:#161D22;
@@ -299,12 +300,12 @@ nav{
 
 .sectionThree
 {
-    background:#1C2732;
-
+  margin-top:-100px;
+  z-index:3;
 
    .section{
       padding:100px 0px 0px 0px;
-     
+      background:#1C2732;
 
   }
 
@@ -329,11 +330,12 @@ nav{
 
 .sectionFour
 {
-  background:#f6f6f6;
 
+  margin-top:-87px;
+  z-index:2;
 
   .section{
-
+  background:#f6f6f6;
   padding:200px 0px 0px 0px;
   }
 
@@ -384,6 +386,7 @@ nav{
 .highlight-box{
   background:#CF5601;
   text-align:right;
+  margin:0 100px;
 
   .btn{
     min-width:50%;
