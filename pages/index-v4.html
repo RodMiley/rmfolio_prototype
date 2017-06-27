@@ -1,28 +1,15 @@
  {% extends "layout-multi-sections3.html" %} {% block sectionOne%}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-offset-1 col-md-10">
-            <div class="content-block">
-                <h2>Rod Miley</h2>
-                <h3>Designer
+    
 
-
-                </h3>
-            </div>
-
-
-        </div>
-
-    </div>
-</div>
 
 {% endblock %} {% block sectionTwo%}
 
     
             <div class="section">
     <div class="row">
-            <h2>About<br />me</h2>
-    
+          <div id="#element-to-animate" class="sticky col-md-6 remove-side-padding">
+            <h2 class="animated">About<br />me</h2>
+          </div>
         <div class="content col-md-6 pull-right white remove-side-padding">
 
 
@@ -42,13 +29,13 @@
 
 {% endblock %} {% block sectionThree %}
 
-<div class="scrollContainer">
-    <div class="scroll">
+
  
             <div class="section">
                 <div class="row">
-                    <h2>What<br /> I Do</h2>
-
+                    <div class="sticky col-md-6 remove-side-padding pull-right">
+                    <h2 class="animated">What<br /> I Do</h2>
+                    </div>
 
                     <div class="content col-md-6 white remove-side-padding">
                         <div class="content-border">
@@ -120,9 +107,6 @@
 
             </div>
         </div>
-    </div>
-
-</div>
 
 <div class="highlight-box">
     <a class="btn btn-primary word" target="_blank" href="http://www.bbc.co.uk">Download my cv</a>
@@ -132,12 +116,11 @@
 {% endblock %} {% block sectionFour%}
 
 
-<div class="scrollContainer">
-    <div class="scroll">
         <div class="section">
   <div class="row">
-            <h2>My<br />Work</h2>
-
+        <div class="sticky col-md-6 remove-side-padding">
+            <h2 class="animated">My<br />Work</h2>
+        </div>
 
             <div class="content col-md-6 pull-right white remove-side-padding">
                 <div class="content-box">
@@ -163,7 +146,5 @@
 
         </div>
     </div>
-</div>
-</div>
 </div>
 {% endblock %}

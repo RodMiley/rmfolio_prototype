@@ -5,16 +5,14 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>An example showing how the fullPage.js jQuery plugin works</title>
+    <title>Homepage v2</title>
 
     <!-- css files -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500,100,800,900" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,300,700,500,100,800,900" rel="stylesheet">  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
 
-    <link href="../css/styles.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
-    <script src="js/main.js"></script>
+    <link href="../css/base2.css" rel="stylesheet">
+   <link href="../css/animate.css" rel="stylesheet">
 
 
     <!--[if lt IE 9]>
@@ -24,178 +22,270 @@
   <body>
 
 
-    <header>
-      <a href="#firstSection" class="brand"></a>
-      <div class="header-top clearfix">
-        <a class="l-right toggle-menu" href="#">
-          <i></i>
-          <i></i>
-          <i></i>
-        </a>
-      </div>
-
-      <nav>
-        <ul id="menu">
-          <li data-menuanchor="firstSection">
-            <a href="#firstSection" title="First Section">First Section</a>
-          </li>
-          <li data-menuanchor="secondSection">
-            <a href="#secondSection" title="Second Section">Second Section</a>
-          </li>
-          <li data-menuanchor="thirdSection">
-            <a href="#thirdSection" title="Second Section">Third Section</a>
-          </li>
-          <li data-menuanchor="fourthSection">
-            <a href="#fourthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="fifthSection">
-            <a href="#fifthSection" title="First Slide">First Slide</a>
-          </li>
-          <li data-menuanchor="fifthSection">
-            <a href="#fifthSection/1" title="Second Slide">Second Slide</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
 
   <!-- You write code for this content block in another file -->
-    <div id="fullpage">
+   <nav class="nav">
+    <a href="#1" class="brand"></a>
+     <ul>
+         <li><a href="#2">About me</a></li>
+         <li><a href="#3">What I do</a></li>
+         <li><a href="#4">My work</a></li>
+         <li><a href="#5">Get in touch</a></li>
+     </ul>
+</nav>
+    <div id="fullpage" class="sections">
   
- <section class="vertical-scrolling">
-
-
-          <div class="content">
-            <div class="col-sm-6 remove-side-padding">
-                <div class="fullheight left">
-                  <h1>ROD MILEY<span> ux designer / developer</span></h1>
-                </div>
-            </div>
-            <div class="col-sm-6 remove-side-padding">
-                <div class="fullheight" style="background:url('img/liverbuilding.jpg') no-repeat 0 0;">
-                         <div class="intro">
-                         <h2>10 <span>YEARS INDUSTRY EXPERIENCE</span></h2> 
-                         <p>Battling against</p>
-                        <blockquote>
-                           Can you make the logo bigger
-                        </blockquote>
-
-                        </div>
-                </div>
-            </div>
-        </div>
+ <section class="sectionOne" id="1">
 
     
-        <div class="scroll-icon">
-          <a href="#secondSection"><span class="sr">Scroll to the next section</span></a>
-        </div>
-    
+
+
 
  </section>
- <section class="vertical-scrolling">
+ <section class="sectionTwo" id="2">
 
 
+    
+            <div class="section">
+    <div class="row">
+          <div id="#element-to-animate" class="sticky col-md-4 remove-side-padding">
+            <h2 class="animated one">About<br />me</h2>
+          </div>
+        <div class="content col-md-8 pull-right white remove-side-padding two animated">
 
-        <div class="content">
-            <div class="col-md-6 remove-side-padding">
-                <div class="halfheight lime">
-<div class="hovereffect">
-    <a href="tropicalworld.html">
-        <img class="background floatRight" src="img/plan-your-visit.jpg" alt="">
-        <div class="overlay">
-        </div>
-        <h2><span>View Case Study   ssss ssc </span></h2>
-        <img class="logo" src="img/tropicalworldlogo.svg" alt="">
-    </a>
-</div>
-                  
-                </div>
-            </div>
-<div class="col-md-3 remove-side-padding">
-    <div class="halfheight orange">
-        <div class="hovereffect">
-            <a href="#">
-                <img class="background" src="img/children-lying-in-the-grass.jpg" alt="">
-                <div class="overlay">
-                </div>
-                <h2>View Case Study</h2>
-                <img class="logo" src="img/logo.png" alt="">
-            </a>
+
+            <p class="lead">
+                My name is Rod Miley, I am a digital designer, web developer and dad base in Liverpool uk, I have 10 years industry experience,
+                over the years I've worked with brands such as Leeds.gov.uk, Nationwide building society, NHS and The Co-operative.
+            </p>
+            <p>
+                I am an advocate of  a user centered approach, I like to simply cut through the content and deliver the key information to
+                the user!
+            </p>
+          <h3>History</h3>
         </div>
     </div>
 </div>
-            <div class="col-md-3 remove-side-padding">
-                <div class="halfheight red">
-             <div class="hovereffect">
-    <a href="#">
-        <img class="background floatRight" src="img/plan-your-visit.jpg" alt="">
-        <div class="overlay">
+
+
+
+ </section>
+  <section class="sectionThree" id="3">
+
+
+
+ 
+            <div class="section">
+                <div class="row">
+                    <div class="sticky col-md-4 remove-side-padding">
+                    <h2 class="animated three">What<br /> I Do</h2>
+                    </div>
+
+                    <div class="content col-md-8 white remove-side-padding animated four">
+                        <div class="content-border ">
+                            <h3>UX</h3>
+                            <ul>
+                                <li>
+                                    <p>SKETCHING</p>
+                                </li>
+                                <li>
+                                    <p>WIREFRAMING</p>
+                                </li>
+                                <li>
+                                    <p>PROTOTYPING</p>
+                                </li>
+                                <li>
+                                    <p>USER TESTING</p>
+                                </li>
+                                <li>
+                                    <p>COMPETITOR ANALISIS</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-border">
+                            <h3>Visual Design</h3>
+                            <ul>
+                                <li>
+                                    <p>SKETCH</p>
+                                </li>
+                                <li>
+                                    <p>ILLUSTRATOR</p>
+                                </li>
+                                <li>
+                                    <p>PROTOSHOP</p>
+                                </li>
+                                <li>
+                                    <p>FIREWORKS</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="content-border">
+                            <h3>Development</h3>
+                            <ul>
+                                <li>
+                                    <p>HTML5</p>
+                                </li>
+                                <li>
+                                    <p>CSS 3</p>
+                                </li>
+                                <li>
+                                    <p>SASS / LESS</p>
+                                </li>
+                                <li>
+                                    <p>JAVASCRIPT</p>
+                                </li>
+                                <li>
+                                    <p>RESPONSIVE</p>
+                                </li>
+                                <li>
+                                    <p>GIT</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+ 
+
+            </div>
         </div>
-        <h2>View Case Study</h2>
-        <img class="logo" src="img/tropicalworldlogo.svg" alt="">
-    </a>
+
+<div class="highlight-box">
+    <a class="btn btn-primary word" target="_blank" href="http://www.bbc.co.uk">Download my cv</a>
 </div>
-                </div>
-            </div>
-                <div class="col-md-3 remove-side-padding">
-                <div class="halfheight green">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="img/liverbuilding.jpg" alt="">
-                        <div class="overlay">
-                            <h2>Hover effect 1</h2>
-                            <a class="info" href="#">link here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>    <div class="col-md-3 remove-side-padding">
-                <div class="halfheight green">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="img/liverbuilding.jpg" alt="">
-                        <div class="overlay">
-                            <h2>Hover effect 1</h2>
-                            <a class="info" href="#">link here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>    <div class="col-md-3 remove-side-padding">
-                <div class="halfheight green">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="img/liverbuilding.jpg" alt="">
-                        <div class="overlay">
-                            <h2>Hover effect 1</h2>
-                            <a class="info" href="#">link here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>    <div class="col-md-3 remove-side-padding">
-                <div class="halfheight green">
-                    <div class="hovereffect">
-                        <img class="img-responsive" src="img/liverbuilding.jpg" alt="">
-                        <div class="overlay">
-                            <h2>Hover effect 1</h2>
-                            <a class="info" href="#">link here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
+ </section>
+  <section class="sectionFour" id="4">
+
+
+
+        <div class="section">
+  <div class="row">
+
+        <div class="sticky col-md-4 remove-side-padding">
+            <h2 class="animated five">My<br />Work</h2>
         </div>
 
+            <div class="content col-md-8 pull-right white remove-side-padding animated six">
+                <div class="content-box" id="tropical1">
+                    <a href="#tropical">
+                        <span class="overlay lime" style="background:url('img/plan-your-visit.jpg') no-repeat center center">
+        </span>
+                        <img class="logo" src="img/tropicalworldlogo.svg" alt="">
+                        <span class="title">Tropical world</span>
+                    </a>
+                </div>
+  
+       </div>    
+               
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
  </section>
-  <section class="vertical-scrolling">
-
-Section four
-
- </section>
-  <section class="vertical-scrolling">
+   <section class="sectionFive" id="5">
 
 
  </section>
+ 
 
 </div>
 
     <!-- js files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+<script src="../js/fixto.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>             
+<script>
+
+var sections = $('section')
+  , nav = $('nav')
+  , nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+      
+
+    }
+  });
+});
 
 
+
+$()
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
+});
+
+
+$(document).ready(function(){
+
+$('.sticky').fixTo('.section', {mind:'.nav'});
+
+  var animate1 = 'fadeInLeft';
+  var animate2 = 'slideInUp visible';
+
+  $('.animated').css('opacity', 0);
+ 
+  $('.one').waypoint(function() {
+      $('.one').addClass(animate1);
+  }, { offset: '50%' });
+  $('.three').waypoint(function() {
+      $('.three').addClass(animate1);
+  }, { offset: '50%' });
+
+    $('.five').waypoint(function() {
+      $('.five').addClass(animate1);
+  }, { offset: '50%' });
+
+
+    $('.two').waypoint(function() {
+      $('.two').addClass(animate2);
+  }, { offset: '50%' });
+
+    $('.four').waypoint(function() {
+      $('.four').addClass(animate2);
+  }, { offset: '50%' });
+
+  
+    $('.six').waypoint(function() {
+      $('.six').addClass(animate2);
+  }, { offset: '50%' });
+
+
+
+$( ".content-box a" ).click(function() {
+    $('.sectionFour').toggleClass('projectOpen')
+});
+
+$( ".closeProject" ).click(function() {
+    $('.sectionFour').removeClass('projectOpen')
+});
+
+});
+
+</script>
 </body>
 </html>

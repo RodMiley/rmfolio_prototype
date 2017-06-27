@@ -1142,3 +1142,13 @@ h1 {
 
 .floatRight {
   float: right; }
+
+  
+.text
+{
+    padding:50px;
+    height:100vh;
+    font-size:20px;
+    background:#fff;
+    overflow:scroll;
+}

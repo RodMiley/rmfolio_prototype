@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
 
     <link href="../css/base2.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+   <link href="../css/animate.css" rel="stylesheet">
 
 
     <!--[if lt IE 9]>
@@ -22,24 +22,21 @@
   <body>
 
 
-    <header>
-      <a href="" class="brand"></a>
-    </header>
 
 
   <!-- You write code for this content block in another file -->
-
-   <nav>
+   <nav class="nav">
+    <a href="#1" class="brand"></a>
      <ul>
-         <li><a href="">About me</a></li>
-         <li><a href="">What I do</a></li>
-         <li><a href="">My work</a></li>
-         <li><a href="">Get in touch</a></li>
+         <li><a href="#2">About me</a></li>
+         <li><a href="#3">What I do</a></li>
+         <li><a href="#4">My work</a></li>
+         <li><a href="#5">Get in touch</a></li>
      </ul>
 </nav>
-    <div id="fullpage">
+    <div id="fullpage" class="sections">
   
- <section class="sectionOne">
+ <section class="sectionOne" id="1">
 
 <div class="container-fluid">
     <div class="row">
@@ -60,7 +57,7 @@
 
 
  </section>
- <section class="sectionTwo">
+ <section class="sectionTwo" id="2">
 
 <div class="container-fluid">
     <div class="row">
@@ -88,7 +85,7 @@ the user!
 
 
  </section>
-  <section class="sectionThree">
+  <section class="sectionThree" id="3">
 
 
 <div class="scrollContainer">   
@@ -144,7 +141,7 @@ the user!
 
 
  </section>
-  <section class="sectionFour">
+  <section class="sectionFour" id="4">
 
 
 <div class="scrollContainer">   
@@ -202,7 +199,7 @@ the user!
 
 
  </section>
-   <section class="sectionFive">
+   <section class="sectionFive" id="5">
 
 
  </section>
@@ -211,7 +208,94 @@ the user!
 </div>
 
     <!-- js files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+<script src="../js/fixto.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>             
+<script>
+
+var sections = $('section')
+  , nav = $('nav')
+  , nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+      
+
+    }
+  });
+});
 
 
+
+$()
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
+});
+
+
+$(document).ready(function(){
+
+$('.sticky').fixTo('.section', {mind:'.nav'});
+
+  var animate1 = 'fadeInLeft';
+  var animate2 = 'slideInUp visible';
+
+  $('.animated').css('opacity', 0);
+ 
+  $('.one').waypoint(function() {
+      $('.one').addClass(animate1);
+  }, { offset: '50%' });
+  $('.three').waypoint(function() {
+      $('.three').addClass(animate1);
+  }, { offset: '50%' });
+
+    $('.five').waypoint(function() {
+      $('.five').addClass(animate1);
+  }, { offset: '50%' });
+
+
+    $('.two').waypoint(function() {
+      $('.two').addClass(animate2);
+  }, { offset: '50%' });
+
+    $('.four').waypoint(function() {
+      $('.four').addClass(animate2);
+  }, { offset: '50%' });
+
+  
+    $('.six').waypoint(function() {
+      $('.six').addClass(animate2);
+  }, { offset: '50%' });
+
+
+
+$( ".content-box a" ).click(function() {
+    $('.sectionFour').toggleClass('projectOpen')
+});
+
+$( ".closeProject" ).click(function() {
+    $('.sectionFour').removeClass('projectOpen')
+});
+
+});
+
+</script>
 </body>
 </html>
